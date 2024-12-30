@@ -1,0 +1,34 @@
+<?php
+
+namespace Database\Seeders;
+
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class DatabaseSeeder extends Seeder
+{
+    /**
+     * Seed the application's database.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        // \App\Models\User::factory(10)->create();
+
+        \App\Models\User::factory()->create([
+            'name' => 'SystemAdmin',
+            'email' => 'system@mail.com',
+            'phone' => '+8801710001337',
+            'firstname' => 'Super',
+            'lastname' => 'Admin',
+            'profile_img' => '',
+            'national_id_no' => '',
+            'address' => '',
+            'facebook_id' => '',
+            'google_id' => '',
+            'type' => 'SUPERADMIN',
+            'password' => bcrypt(123456),
+        ]);
+    }
+}
