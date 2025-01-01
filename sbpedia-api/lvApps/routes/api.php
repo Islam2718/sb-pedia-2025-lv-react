@@ -7,23 +7,27 @@ use App\Http\Controllers\API\SiteinfoController;
 use App\Http\Controllers\API\SocialController;
 use App\Http\Controllers\API\UserauthController;
 use App\Http\Controllers\API\UserController;
-use App\Http\Controllers\API\StoreController;
+// use App\Http\Controllers\API\StoreController;
 
-use App\Http\Controllers\API\PageController;
-use App\Http\Controllers\API\SectionController;
-use App\Http\Controllers\API\WidgetController;
+// use App\Http\Controllers\API\PageController;
+// use App\Http\Controllers\API\SectionController;
+// use App\Http\Controllers\API\WidgetController;
 
-use App\Http\Controllers\API\TypeController;
-use App\Http\Controllers\API\CategoryController;
-use App\Http\Controllers\API\LocationController;
-use App\Http\Controllers\API\AdController;
-use App\Http\Controllers\API\ProductController;
-use App\Http\Controllers\API\StockController;
-use App\Http\Controllers\API\OrderController;
-use App\Http\Controllers\API\OrderItemController;
-use App\Http\Controllers\API\PaymentController;
-use App\Http\Controllers\API\CustomerController;
-use App\Http\Controllers\API\SupplierController;
+// news 
+use App\Http\Controllers\API\News\NewsCategoryController;
+use App\Http\Controllers\API\News\NewsContentController;
+
+// use App\Http\Controllers\API\TypeController;
+// use App\Http\Controllers\API\CategoryController;
+// use App\Http\Controllers\API\LocationController;
+// use App\Http\Controllers\API\AdController;
+// use App\Http\Controllers\API\ProductController;
+// use App\Http\Controllers\API\StockController;
+// use App\Http\Controllers\API\OrderController;
+// use App\Http\Controllers\API\OrderItemController;
+// use App\Http\Controllers\API\PaymentController;
+// use App\Http\Controllers\API\CustomerController;
+// use App\Http\Controllers\API\SupplierController;
 // report 
 use App\Http\Controllers\API\ReportController;
 // files 
@@ -54,34 +58,34 @@ Route::middleware('throttle:60,1')->group(function () {
     Route::resource('siteinfo', SiteinfoController::class)->only(['index', 'update']);
     Route::resource('social', SocialController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
     
+    // news 
+    Route::resource('news-category', NewsCategoryController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+    Route::resource('news-content', NewsContentController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+
     Route::get('user-info', [UserauthController::class, 'getUserDetails']);
     Route::post('logout', [UserauthController::class, 'userLogout']);
 
     Route::resource('user', UserController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
-    Route::resource('store', StoreController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
-    Route::get('store/{id}/set_default', 'App\Http\Controllers\API\StoreController@setDefaultCompany');
+    // Route::resource('store', StoreController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+    // Route::get('store/{id}/set_default', 'App\Http\Controllers\API\StoreController@setDefaultCompany');
 
-    Route::resource('page', PageController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
-    Route::get('page/{id}/status', 'App\Http\Controllers\API\PageController@updateStatus');
-    Route::resource('section', SectionController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
-    Route::resource('widget', WidgetController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
-    Route::get('widget/{id}/status', 'App\Http\Controllers\API\WidgetController@updateStatus');
+    // Route::resource('page', PageController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+    // Route::get('page/{id}/status', 'App\Http\Controllers\API\PageController@updateStatus');
+    // Route::resource('section', SectionController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+    // Route::resource('widget', WidgetController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+    // Route::get('widget/{id}/status', 'App\Http\Controllers\API\WidgetController@updateStatus');
 
-    Route::resource('types', TypeController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
-    Route::resource('category', CategoryController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
-    Route::resource('location', LocationController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
-    Route::resource('ad', AdController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
-    Route::resource('product', ProductController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
-    Route::resource('stock', StockController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
-    Route::resource('order', OrderController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
-    Route::resource('order-item', OrderItemController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
-    Route::resource('payment', PaymentController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
-    Route::resource('customer', CustomerController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
-    Route::resource('suplier', SupplierController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
-
-    // report 
-    Route::get('report-due', [ReportController::class, 'due']);
-    Route::get('report-dashboard', [ReportController::class, 'dashboard']);
+    // Route::resource('types', TypeController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+    // Route::resource('category', CategoryController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+    // Route::resource('location', LocationController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+    // Route::resource('ad', AdController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+    // Route::resource('product', ProductController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+    // Route::resource('stock', StockController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+    // Route::resource('order', OrderController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+    // Route::resource('order-item', OrderItemController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+    // Route::resource('payment', PaymentController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+    // Route::resource('customer', CustomerController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+    // Route::resource('suplier', SupplierController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
 
     Route::get('files', 'App\Http\Controllers\API\UploadController@getAllFile');
     Route::post('upload-single', 'App\Http\Controllers\API\UploadController@uploadFile');
