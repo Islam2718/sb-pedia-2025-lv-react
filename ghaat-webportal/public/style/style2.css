@@ -1,0 +1,429 @@
+/**
+* Template Name: Grameen e-Haat
+* Updated: Jun 23 2023 with Bootstrap v5.3.0
+*/
+body{
+    /* background-image: url(images/home.jpg); */
+    background: #F4F6F8;
+}
+/*--======Nav Section Srart=======-*/ 
+.logo{
+    width: 60px;
+    height: 50px;
+}
+
+.ghaat-active-btn{
+    color:rgb(81, 146, 89) !important;
+    font-weight: bold !important;
+}
+
+.nav-lin a{
+    font-size: 16px;
+    font-weight: bold;
+    color:#fff;
+}
+.nav-link:hover{
+    color:green;
+}
+.user-icon{
+    margin-left: 13px;
+    font-size: 20px;
+    border: 2px solid #519259;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    text-align: center;
+    color: gray;
+    cursor: pointer;
+    overflow: hidden;
+}
+.user-section{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+ }
+/*--======Nav Section End=======-*/
+/*--======Banner Section Srart=======-*/
+.banner{
+    background-image: url('../images/banner-bg.webp');
+    background-size: cover;
+    background-color: #13382A;
+    height: 100%;
+    width: 100%; 
+}
+.banner-contant{
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-contant span{
+    color:#e6b00e;
+    padding: 0 0 0 3px;
+}
+
+.btn0{
+    width: 110px;
+    height: 32px;
+    line-height: 15px;
+    margin-left: -123px;
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    
+}
+.btn0 i{
+   margin-left: 5px;
+   font-weight: bolder;
+}
+.form-control{
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+
+.banner-grid .row{
+    padding: 90px;
+}
+.sub-contanet{
+    margin-top: 30px;
+}
+
+/*--======Banner Section End=======-*/
+.mini-card img{
+    width: 40%;
+    height: 50px;
+    padding: 1px;
+    border-radius: 5px;
+}
+.mini-card p{
+   margin: 0;
+   color:#797979;
+   font-size: 13px;
+   font-weight: 600;
+   padding: 0 0px 0 7px;
+}
+.icon-item{
+    min-height: 60px;
+    line-height: 60px;    
+}
+.link a{
+    color:#080808;
+}
+.link-list{
+    display: flex;
+    justify-content:space-between;
+
+}
+/*--=========large grid card start=========--*/
+.large-grid-first{
+    border-radius: 10px;
+    
+}
+
+.large-grid-first img{
+    border-radius: 10px;
+}
+
+/*--=========large grid card End=========--*/
+/*--========= grid section two Start=========-*/
+
+/*--========= grid section two End=========-*/
+
+
+/*--========= grid section five Start=========--*/
+.grid-section-five{
+    margin: 30px 0;
+
+}
+.try-it{
+    border: 1px solid green;
+    border-radius: 5px;
+    height: 228px;
+    padding: 40px 10px;
+    background: linear-gradient(165deg, rgb(237, 241, 183) 0%, rgba(255,255,255,1) 100%);
+    position: relative;
+  
+}
+.try-it a{
+    background: rgb(69, 124, 235);
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+    width: 140px;
+    text-decoration: none;
+    color:white;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 40px;
+    left: 53px;
+}
+.storage-packeg{
+    width: 528px;
+    height:228px ;
+}
+.storage-packeg img{
+    height: 224px;
+}
+/*--========= grid section five end=========--*/
+/*--=========Video with add start=========--*/
+.video-add{
+    margin: 30px 0px;
+}
+
+.video{
+    height: 300px;   
+}
+/*--=========Video with add end=========--*/
+
+
+
+/*--======Card gary container start=======-*/
+.card-gray-container{
+    margin: 30px 0px;
+}
+
+.btn.portable-helth{
+    border-radius: 10px;
+    margin-top: 10px;
+    margin: 30px;
+    
+}
+
+/*--======Card gary container End=======-*/
+
+
+/*--------------add start------------*/
+.card-green-container{
+    margin: 30px 0;
+}
+.add-btn{
+    position: relative;
+}
+.add-btn a{
+    background: rgb(69, 124, 235);
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    padding:10px ;
+    border-radius: 5px;
+    position: absolute;
+    left: 134px;
+    bottom: 30px;
+    cursor: pointer;
+   
+}
+.add-third-img img {
+    width: 350px;
+    width: 350px;
+}
+/*--------------add end------------*/
+
+/*--========= 10k nobin start with side image=========--*/
+.nobin-section{
+    position: relative;
+}
+.nobin-section p{
+    background: linear-gradient(165deg, rgba(255,208,17,1) 0%, rgba(255,255,255,1) 100%);;
+    padding: 20px 70px;
+    font-size: 30px;
+    border: 1px solid #ffd011;
+}
+.side-img{
+    position: relative;
+   
+}
+.side-img img{
+    position: absolute;
+    right: 0;
+    width: 240px;
+    height: 40px;
+    margin: 20px 0px;
+    bottom: 13px;
+    line-height: 40px;
+ 
+    
+}
+.about-bottom .icon i{
+    background:#fff;
+    padding: 10px;
+    border-radius: 50%;
+    color: #999999;
+}
+/*--========= 10k nobin end=========--*/
+/*--========= payment section start=========--*/
+.payment{
+    position: relative;
+    margin: 70px 0;
+}
+
+.full-hr{
+
+    position: relative;
+}
+
+.payment-container img{
+    margin-left: 10px;
+}
+/*--========= payment section start=========--*/
+/*--========= footer section start=========--*/
+/*--========= footer section End=========--*/
+/*--=========Card bottom section start=========--*/
+.bottom-card{
+    margin: 20px 0px;
+}
+
+/*--=========Card bottom section End=========--*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*------------Card mini strat-------*/
+@media only screen and (max-width: 700px) {
+
+    .navbar-nav{
+        text-align:center;
+       
+        width: 300px;
+    }
+    
+    .nav-item:hover{
+        background: rgb(24, 69, 24);
+        
+    }
+    .btn0{
+        margin-left: -123px;
+        font-size: 12px;
+    }
+    .btn0 i{
+        font-size: 10px;
+        font-size: 10px;
+     }
+   
+  }
+
+
+  .typing-animation {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 0.15em solid transparent; /* Adjust the border size and color as needed */
+    white-space: nowrap;
+    margin: 0;
+    animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite alternate;
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: transparent; }
+  }
+  
+  .backspace-animation {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    animation: backspace 2.5s steps(40, end), blink-caret 0.75s step-end infinite alternate;
+  }
+  
+  @keyframes backspace {
+    from { width: 100%; }
+    to { width: 0; }
+  }
+  
+  .caret-animation {
+    animation: blink-caret 0.50s step-end infinite alternate;
+  } 
+  
+  /* Optional: Adjust caret appearance */
+ .caret-animation::after {
+    content: '|';
+  } 
+  
+
+  /* post link style  */
+  
+  .post-link-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .post-link {
+    display: flex;
+    flex-wrap: nowrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  
+  .overflow-container {
+    position: relative;
+  }
+  
+  .dropdown-toggle {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown-menu.show {
+    display: block;
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    padding: 0.1rem 1rem;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.3em;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+  }
+  
+  

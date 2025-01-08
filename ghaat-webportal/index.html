@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer" />
+    <!-- Style CSS -->
+    <!-- <link rel="stylesheet" href="http://localhost:3000/style/style2.css"> -->
+    <!-- <link rel="stylesheet" href="https://test.grameen-ehaat.com/style/style2.css"> -->
+    <link rel="stylesheet" href="https://grameen-ehaat.com/style/style2.css">
+    <!-- <link rel="stylesheet" href="http://localhost:3000/sass/style.css"> -->
+    <!-- <link rel="stylesheet" href="https://test.grameen-ehaat.com/sass/style.css"> -->
+    <link rel="stylesheet" href="https://grameen-ehaat.com/sass/style.css">
+    <title>Grameen eHaat</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const postLinkContainer = document.querySelector('.post-link-container');
+        const postLink = document.querySelector('.post-link');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+        
+        function checkOverflow() {
+          if (!postLink) return; // Check if postLink is null
+          
+          if (postLink.scrollWidth > postLink.offsetWidth) {
+            const hiddenLinks = Array.from(postLink.querySelectorAll('li:not(:last-child)')).reverse();
+            hiddenLinks.forEach(link => {
+              dropdownMenu.insertBefore(link.cloneNode(true), dropdownMenu.firstChild);
+              link.remove();
+            });
+            document.getElementById('dropdown-toggle').classList.add('show');
+          } else {
+            const shownLinks = Array.from(dropdownMenu.children);
+            shownLinks.forEach(link => {
+              postLink.appendChild(link.cloneNode(true));
+              link.remove();
+            });
+            document.getElementById('dropdown-toggle').classList.remove('show');
+          }
+        }
+        window.addEventListener('resize', checkOverflow);
+        checkOverflow(); // Call checkOverflow once after DOMContentLoaded
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" ></script>
+  </body>
+</html>

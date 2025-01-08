@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "title": "g-banker",
+        "description": "",
+        "url": "https://gbanker.app:8273/Account/Login?ReturnUrl=%2f",
+        "thumb": "c1.jpg",
+        "status": ""
+    },
+    {
+        "id": 2,
+        "title": "g-hrm",
+        "description": "",
+        "url": "http://sangram.ghrmplus.com/account/login",
+        "thumb": "c1.jpg",
+        "status": ""
+    },
+    {
+        "id": 3,
+        "title": "g-check",
+        "description": "",
+        "url": "https://grameencheck.com/",
+        "thumb": "gehaat_1715015879.webp",
+        "status": ""
+    },
+    {
+        "id": 4,
+        "title": "g-micfina",
+        "description": "",
+        "url": "https://grameen.org.au/what-is-microfinance/",
+        "thumb": "gehaat_1715016040.webp",
+        "status": ""
+    },
+    {
+        "id": 5,
+        "title": "g-banker-site-thumb",
+        "description": "",
+        "url": "https://gbanker.app:8273/Account/Login?ReturnUrl=%2f",
+        "thumb": "gehaat_1715017611.webp",
+        "status": ""
+    },
+    {
+        "id": 6,
+        "title": "nobin-udyokta",
+        "description": "",
+        "url": "http://gtctrust.com/activity/nobin-udyokta/",
+        "thumb": "gehaat_1715018077.webp",
+        "status": ""
+    },
+    {
+        "id": 7,
+        "title": "grameen-danone",
+        "description": "",
+        "url": "https://www.grameendanone.net/",
+        "thumb": "gehaat_1715018617.webp",
+        "status": ""
+    }
+]
