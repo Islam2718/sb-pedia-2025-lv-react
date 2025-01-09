@@ -34,17 +34,18 @@ class UserController extends Controller
     public function store(Request $request): Response
     {
         //
-        if(Auth::guard('api')->check()){        
-            $validatedData = $request->validate([
-                'email' => 'required',
-            ]);
-            if($User = User::create($request->all())){
-                return Response(['data' => $User, 'message' => 'User created Successfully !.'], 201);
-            }else{
-                return Response(['data' => $User, 'message' => 'Missing Field !.'], 400);
-            }
+        if(!Auth::guard('api')->check()){        
+            return Response(['data' => 'Unauthorized!'], 401);
         }
-        return Response(['data' => 'Unauthorized!'], 401);
+
+        $validatedData = $request->validate([
+            'email' => 'required',
+        ]);
+        if($User = User::create($request->all())){
+            return Response(['data' => $User, 'message' => 'User created Successfully !.'], 201);
+        }else{
+            return Response(['data' => $User, 'message' => 'Missing Field !.'], 400);
+        }
     }
 
     /**
@@ -56,15 +57,16 @@ class UserController extends Controller
     public function show($user): Response
     {
         //
-        if(Auth::guard('api')->check()){        
-            $User = User::find($user);
-            if(!$User){
-                return Response(['data' => $User, 'message' => 'User not found !.'], 404);
-            }else{      
-                return Response(['data' => $User, 'status' => 200], 200);
-            }
+        if(!Auth::guard('api')->check()){        
+            return Response(['data' => 'Unauthorized!'], 401);
         }
-        return Response(['data' => 'Unauthorized!'], 401);
+
+        $User = User::find($user);
+        if(!$User){
+            return Response(['data' => $User, 'message' => 'User not found !.'], 404);
+        }else{      
+            return Response(['data' => $User, 'status' => 200], 200);
+        }        
     }
 
     /**
@@ -77,19 +79,20 @@ class UserController extends Controller
     public function update(Request $request, $user): Response
     {
         //
-        if(Auth::guard('api')->check()){        
-            $validatedData = $request->validate([
-                'email' => 'required',
-            ]);
-            $User = User::find($user);
-            if(!$User){
-                return Response(['data' => $User, 'message' => 'User not found !.'], 404);
-            }else{
-                $User = $User->update($request->all());       
-                return Response(['data' => $User, 'message' => 'updated successfully!.'], 204);
-            }
+        if(!Auth::guard('api')->check()){        
+            return Response(['data' => 'Unauthorized!'], 401);
         }
-        return Response(['data' => 'Unauthorized!'], 401);
+
+        $validatedData = $request->validate([
+            'email' => 'required',
+        ]);
+        $User = User::find($user);
+        if(!$User){
+            return Response(['data' => $User, 'message' => 'User not found !.'], 404);
+        }else{
+            $User = $User->update($request->all());       
+            return Response(['data' => $User, 'message' => 'updated successfully!.'], 204);
+        }
     }
 
     /**
@@ -101,15 +104,15 @@ class UserController extends Controller
     public function destroy(Request $request, $user): Response
     {
         //
-        if(Auth::guard('api')->check()){
-            $response = User::find($user);
-            dd($response);
-            if (! $response) {
-                return Response(['data' => 'User not found !.'], 404);
-            }
-            $response->delete();
-            return Response(['data' => 'User Deleted Successfully !.'], 202);
+        if(!Auth::guard('api')->check()){        
+            return Response(['data' => 'Unauthorized!'], 401);
         }
-        return Response(['data' => 'Unauthorized!'], 401);
+        $response = User::find($user);
+        dd($response);
+        if (! $response) {
+            return Response(['data' => 'User not found !.'], 404);
+        }
+        $response->delete();
+        return Response(['data' => 'User Deleted Successfully !.'], 202);    
     }
 }
